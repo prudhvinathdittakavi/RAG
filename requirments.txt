@@ -1,0 +1,7 @@
+numpy
+llama_index
+llama-index-llms-palm
+llama-index-embeddings-huggingface
+llama-index-embeddings-instructor
+google-generativeai
+python-dotenv
