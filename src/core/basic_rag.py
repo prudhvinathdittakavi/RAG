@@ -7,9 +7,16 @@ import os
 from dotenv import load_dotenv
 import PyPDF2
 import logging
+import sys
+import os
+
+# Add the project root directory to sys.path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(current_dir, '..', '..')
+sys.path.append(project_root)
 
 # import utils
-from src.utils import chunk_text, read_text_file, get_embedding_model, get_embeddings, cosine_similarity
+from src.utils.utils import chunk_text, read_text_file, get_embedding_model, get_embeddings, cosine_similarity
 
 # Configuring the logger
 # different logging levels are: DEBUG, INFO, WARNING, ERROR, CRITICAL
@@ -29,7 +36,7 @@ palm_api_key = os.getenv('PALM_API_KEY', "")
 genai.configure(api_key=palm_api_key)
 
 # Read the external text file and split it into chunks.
-text_file = read_text_file("data/J. K. Rowling - Harry Potter 1 - Sorcerer's Stone.txt")
+text_file = read_text_file("../../data/J. K. Rowling - Harry Potter 1 - Sorcerer's Stone.txt")
 chunks = chunk_text(text_file, chunk_size=250)
 
 # Initialize an embedding Model.
