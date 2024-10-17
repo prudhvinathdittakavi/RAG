@@ -6,3 +6,10 @@ llama-index-embeddings-instructor
 google-generativeai
 python-dotenv
 PyPDF2
+
+# langchain
+langchain-community 
+langgraph 
+langchain-google-genai
+tavily-python 
+langgraph-checkpoint-sqlite

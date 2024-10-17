@@ -27,8 +27,12 @@
 
 ## Install the required dependencies
 - pip install --upgrade pip
-- pip install -r requirements.txt
+- pip install -r requirments.txt
 
 ## To deactivate the virtual environment
 ###  run the following command on terminal.
 - deactivate
+
+## To run unit test cases
+### Below command checks the tests folder and runs all the files starting with test_
+- python -m unittest discover -s tests
